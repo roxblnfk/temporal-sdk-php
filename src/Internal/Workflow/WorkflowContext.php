@@ -459,7 +459,7 @@ class WorkflowContext implements WorkflowContextInterface
             return $result[0];
         }
 
-        return Promise::any($result)->then(
+        return React\Promise\any($result)->then(
             function ($result) use ($conditionGroupId) {
                 $this->resolveConditionGroup($conditionGroupId);
                 return $result;
